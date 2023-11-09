@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+
 import './App.css';
+import CardsinCart from './components/CardsinCart.js';
+import { ProgressBar } from './components/ProgressBar.js';
+import { UseEffeect } from "./components/UseEffeect.js";
+import React, { useState } from 'react'
 
 function App() {
+
+  const [count,setcount]= useState([0,0,0,0,0]);
+
+
+
+  const handleClickInc=(index)=>{
+  const newCount=[...count];
+  newCount[index]+=1;
+
+
+  
+   setcount(newCount);
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  
+     {/* {count.map((cnt,index)=>(cnt<=10 &&
+      <CardsinCart  handleClickInc={()=>handleClickInc(index)} count={cnt} key={index}/>
+     ))} */}
+  
+  <ProgressBar/>
     </div>
   );
 }

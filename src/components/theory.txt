@@ -1,0 +1,19 @@
+* function of parent component can be mutent by its child
+* types of pros 1.Data rops,2.Children Props
+* is child component can mutet function of parent component so anser is yes
+*Hasmerafsanjani
+
+*useEffect=to do womething after only the mounting phase ends
+ question why useEffect use practricle ans?
+ - if we want to execute perticuler function only when the perticular state is change then we can use useEffect for that we just need to put state in dependancy array wich present 
+  in use effect so thats why we use useEffect 
+
+*Lifecycles phase-mounting,updating,unmounting
+- first time component renders its a mounting phase(Initial rendering/mounting of the component in DOM)
+- when we make some changes then rendering happens this is nothing but a updating phase
+- The phase when a component deleted from the component tree only once
+
+*Component can be controlled are known as controller component eg input component<input/>>
+
+*why we need to do unmounting?
+- to avoid momory leak or we can say to remove useeffect effect
